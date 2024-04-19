@@ -70,3 +70,9 @@ Route::get('rinci/{name}/{bb}/{tb}',function ($a, $bb, $tb){
     }
     return "nama: $a <br> berat badan: $bb <br> tinggi badan: $tb <br> nilai BMI: $bmi <br> keterangan: $ket";
 });
+
+//Route optimal Parameter => ditandai dengan ?
+Route::get('myname/{name}', function ($a) {
+    return "my name is $a";
+   
+});
