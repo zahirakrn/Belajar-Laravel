@@ -2,6 +2,7 @@
 
 use App\Models\Post;
 use App\Models\Barang;
+use App\Models\Siswa;
 
 use Illuminate\Support\Facades\Route;
 /*
@@ -81,11 +82,42 @@ Route::get('myname/{name}', function ($a) {
 
 //menampilkan data dari database
 Route::get('/testmodel', function () {
-    $data = POST::all();
-    return $data;
+    $data = Post::all();
+
+    return view('tampil_post',compact('data'));
+    
+
 });
 
 Route::get('/testbarang', function () {
     $data = Barang::all();
-    return $data;
+
+    return view('tampil_barang', compact('data'));
+});
+Route::get('/testsiswa', function () {
+    $data = Siswa::all();
+
+    // nampilin berdasarkan jenis kelamin
+    // $data = Siswa::where('jenis kelamin', 'like', '%Perempuan%')->get();
+
+    // nambahin data
+    // $data = new Siswa;
+    // $data -> nama= "Siti";
+    // $data -> jenis_kelamin= "perempuan";
+    // $data -> alamat= "Bojong suren";
+    // $data -> agama= "Budha";
+    // $data -> telpon= 98765;
+    // $data -> email= "sitiyuu@gmail.com";
+    // $data ->save();
+
+    // mengubah data
+    // $data = Siswa::find(13);
+    // $data->nama = "alvin";
+    // $data->jenis_kelamin = "Laki Laki";
+    // $data->save();
+
+    // return $data;
+
+    return view('tampil_siswa', compact('data'));
+
 });

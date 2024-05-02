@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -15,14 +14,14 @@ class BarangsTableSeeder extends Seeder
      */
     public function run()
     {
-    $barangs = [
-    ['nama'=>'Tas', 'jumlah'=>100],
-    ['nama'=>'Sepatu', 'jumlah'=>150],
-    ['nama'=>'Sendal', 'jumlah'=>200]
-];
+        $barangs = [
+            ['nama' => 'Tas', 'jumlah' => 100],
+            ['nama' => 'Sepatu', 'jumlah' => 150],
+            ['nama' => 'Sendal', 'jumlah' => 200],
+        ];
 
 //masukan data ke database
-DB::table('barangs')->insert($barangs);
+        DB::table('barangs')->insert($barangs);
 
     }
 }
