@@ -3,6 +3,16 @@
 use App\Models\Post;
 use App\Models\Barang;
 use App\Models\Siswa;
+use App\Models\Pengguna;
+use App\Models\Telepon;
+use App\Models\Merks;
+use App\Models\Produk;
+use App\Models\Pembeli;
+use App\Models\Barang2s;
+use App\Models\Transaksi;
+
+
+
 
 use Illuminate\Support\Facades\Route;
 /*
@@ -89,12 +99,12 @@ Route::get('/testmodel', function () {
 
 });
 
-Route::get('/testbarang', function () {
+Route::get('/barang', function () {
     $data = Barang::all();
 
     return view('tampil_barang', compact('data'));
 });
-Route::get('/testsiswa', function () {
+Route::get('/siswa', function () {
     $data = Siswa::all();
 
     // nampilin berdasarkan jenis kelamin
@@ -121,3 +131,44 @@ Route::get('/testsiswa', function () {
     return view('tampil_siswa', compact('data'));
 
 });
+
+Route::get('/pengguna', function () {
+    $pengguna = Pengguna::all();
+
+    return view('tampil_pengguna', compact('pengguna'));
+});
+
+Route::get('/telepon', function () {
+    $telepon = Telepon::all();
+
+    return view('tampil_telepon', compact('telepon'));
+});
+
+Route::get('/merks', function () {
+    $merks = Merks::all();
+
+    return view('tampil_merk', compact('merks'));
+});
+
+Route::get('/produk', function () {
+    $produk = Produk::all();
+
+    return view('tampil_produk', compact('produk'));
+});
+Route::get('/pembeli', function () {
+    $pembeli = Pembeli::all();
+
+    return view('tampil_pembeli', compact('pembeli'));
+});
+Route::get('/barang2', function () {
+    $barang2 = Barang2s::all();
+
+    return view('tampil_barang2', compact('barang2'));
+});
+Route::get('/transaksi', function () {
+    $transaksi = Transaksi::all();
+
+    return view('tampil_transaksi', compact('transaksi'));
+});
+
+

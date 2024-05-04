@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>post</title>
+    <title>pembeli</title>
 </head>
 <body>
     <center>
+        <h2>Data Table Pembeli</h2>
     <table border="1" >
         <tr>
             <th>No</th>
             <th>ID</th>
-            <th>Title</th>
-            <th>Content</th>
+            <th>Nama Pembeli</th>   
+            <th>Jenis Kelamin</th>
         </tr>
         @php $no = 1; @endphp
-        @foreach ($data as $data1)
+        @foreach ($pembeli as $data1)
             <tr>
                 <td>{{ $no++ }}</td>
                 <td>{{ $data1 ->id}}</td>
-                <td>{{ $data1 ->title}}</td>
-                <td>{{ $data1 ->content}}</td>
+                <td>{{ $data1 ->nama_pembeli}}</td>
+                <td>{{ $data1 ->jenis_kelamin}}</td>
             </tr>
         @endforeach
     </table>
