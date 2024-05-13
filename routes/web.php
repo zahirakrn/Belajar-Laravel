@@ -91,10 +91,10 @@ Route::get('myname/{name}', function ($a) {
 });
 
 //menampilkan data dari database
-Route::get('/testmodel', function () {
+Route::get('/template', function () {
     $data = Post::all();
 
-    return view('tampil_post',compact('data'));
+    return view('template',compact('data'));
     
 
 });
@@ -169,6 +169,15 @@ Route::get('/transaksi', function () {
     $transaksi = Transaksi::all();
 
     return view('tampil_transaksi', compact('transaksi'));
+});
+// Route::get('/template', function () {
+
+//     return view('template');
+// });
+Route::get('/template2', function () {
+    $data = Produk::all();
+
+    return view('template2', compact('data'));
 });
 
 
