@@ -16,12 +16,12 @@
             <th>Content</th>
         </tr>
         @php $no = 1; @endphp
-        @foreach ($data as $data1)
+        @foreach ($post as $data)
             <tr>
                 <td>{{ $no++ }}</td>
-                <td>{{ $data1 ->id}}</td>
-                <td>{{ $data1 ->title}}</td>
-                <td>{{ $data1 ->content}}</td>
+                <td>{{ $data ->id}}</td>
+                <td>{{ $data ->title}}</td>
+                <td>{{ $data ->content}}</td>
             </tr>
         @endforeach
     </table>

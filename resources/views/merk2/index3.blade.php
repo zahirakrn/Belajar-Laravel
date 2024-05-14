@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>template</title>
+    <title>merk</title>
   </head>
   <body>
 
@@ -21,20 +21,20 @@
         <div class="container">
             {{-- row 1 --}}
             <div class="row mt-5">
-                <center><h2>List Artikel</h2></center>
+                <center><h2>List Merk</h2></center>
             </div>
             {{-- row 2 --}}
             <div class="row mt-5">
-                @foreach ($data as $data1)
+                @foreach ($merks as $data1)
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <img src="https://www.blibli.com/friends-backend/wp-content/uploads/2024/02/B110050-Cover-Ras-Kucing-Siam-1536x806.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">{{ $data1 ->nama_produk}}</h5>
-                          <p class="card-text">{{ $data1 ->jumlah}}</p>
+                          <h5 class="card-title">{{ $data1 ->nama_merks}}</h5>
+                          {{-- <p class="card-text">{{ $data1 ->jumlah}}</p>
                           <p class="card-text">{{ $data1 ->tanggal_produksi}}</p>
-                          <p class="card-text">{{ $data1 ->merks ->nama_merks}}</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <p class="card-text">{{ $data1 ->merks ->nama_merks}}</p> --}}
+                          <a href="/merks2/{{$data1->id}}" class="btn btn-primary">Liat Detail</a>
                         </div>
                     </div>
                 </div>

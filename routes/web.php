@@ -11,9 +11,9 @@ use App\Models\Pembeli;
 use App\Models\Barang2s;
 use App\Models\Transaksi;
 
-
-
-
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\MerkController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -91,12 +91,11 @@ Route::get('myname/{name}', function ($a) {
 });
 
 //menampilkan data dari database
-Route::get('/template', function () {
-    $data = Post::all();
 
-    return view('template',compact('data'));
-    
+Route::get('/post', function () {
+    $post = Post::all();
 
+    return view('tampil_post', compact('post'));
 });
 
 Route::get('/barang', function () {
@@ -174,10 +173,16 @@ Route::get('/transaksi', function () {
 
 //     return view('template');
 // });
-Route::get('/template2', function () {
-    $data = Produk::all();
 
-    return view('template2', compact('data'));
-});
+//controller
+//post
+Route::get('/post2',[PostController::class,'menampilkan']);
+Route::get('post2/{id}',[PostController::class,'show']);
 
+//produk
+Route::get('/produkk',[ProdukController::class,'menampilkan2']);
+Route::get('produkk/{id}',[ProdukController::class,'show']);
 
+//merk
+Route::get('/merks2',[MerkController::class,'menampilkan3']);
+Route::get('merks2/{id}',[MerkController::class,'show']);

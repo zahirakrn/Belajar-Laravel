@@ -21,18 +21,18 @@
         <div class="container">
             {{-- row 1 --}}
             <div class="row mt-5">
-                <center><h2>List Artikel</h2></center>
+                <center><h2>List Post</h2></center>
             </div>
             {{-- row 2 --}}
             <div class="row mt-5">
-                @foreach ($data as $data1)
+                @foreach ($post as $data)
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/108/2024/04/20/20240420_161508-1596269655.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">{{$data1->title}}</h5>
-                          <p class="card-text">{{$data1->content}}</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">{{$data->title}}</h5>
+                          {{-- <p class="card-text">{{$data1->content}}</p> --}}
+                          <a href="/post2/{{$data->id}}" class="btn btn-primary">Liat Detail</a>
                         </div>
                     </div>
                 </div>
