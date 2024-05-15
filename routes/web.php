@@ -14,6 +14,7 @@ use App\Models\Transaksi;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MerkController;
+
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -186,3 +187,10 @@ Route::get('produkk/{id}',[ProdukController::class,'show']);
 //merk
 Route::get('/merks2',[MerkController::class,'menampilkan3']);
 Route::get('merks2/{id}',[MerkController::class,'show']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//CRUD BRAND
+use App\Http\Controllers\BrandController;
+Route::resource('brand', BrandController::class);

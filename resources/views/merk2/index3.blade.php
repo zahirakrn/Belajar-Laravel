@@ -28,7 +28,7 @@
                 @foreach ($merks as $data1)
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://www.blibli.com/friends-backend/wp-content/uploads/2024/02/B110050-Cover-Ras-Kucing-Siam-1536x806.jpg" class="card-img-top" alt="...">
+                        <img src="https://cdn1-production-images-kly.akamaized.net/-45YCLtjoREsAnRORaqLLizXm0c=/800x1066/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4429148/original/097986100_1684206200-00851R6Qgy1hdz9msx5h3j30qo0zkgsi.jpg" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">{{ $data1 ->nama_merks}}</h5>
                           {{-- <p class="card-text">{{ $data1 ->jumlah}}</p>
