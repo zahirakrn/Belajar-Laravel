@@ -9,6 +9,11 @@ class Brand extends Model
 {   
     use HasFactory;
     protected $filtlabel =['id','name_brand'];
-
     public $timestamps = true;
+
+     //relasi ke tabel
+     public function product()
+     {
+         return $this->hasMany(product::class);
+     }
 }
